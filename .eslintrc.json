@@ -1,0 +1,83 @@
+{
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "eslint-plugin-node",
+        "import",
+        "jest",
+        "no-relative-import-paths",
+        "prettier",
+        "unused-imports"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": "error",
+        "no-relative-import-paths/no-relative-import-paths": [
+            "error",
+            {
+                "allowSameFolder": true
+            }
+        ],
+        "node/no-process-env": "error",
+        "require-await": "error",
+        "unused-imports/no-unused-imports": "error",
+        "prettier/prettier": [
+            "error",
+            {
+                "singleQuote": false,
+                "tabWidth": 4,
+                "semi": true,
+                "useTabs": true,
+                "trailingComma": "es5",
+                "printWidth": 120,
+                "endOfLine": "auto",
+                "arrowParens": "avoid",
+                "plugins": [
+                    "prettier-plugin-pkg"
+                ],
+                "importOrderSeparation": true,
+                "importOrderSortSpecifiers": true,
+                "importOrderParserPlugins": [
+                    // "classProperties",
+                    "decorators-legacy",
+                    "typescript"
+                ],
+                "importOrder": [
+                    "<THIRD_PARTY_MODULES>",
+                    "^(shared|uiKit|components|localization)/(.+)$",
+                    "^@/(.+)$",
+                    "^app/(.+)$",
+                    "^./(.+)$"
+                ]
+            }
+        ]
+    }
+}

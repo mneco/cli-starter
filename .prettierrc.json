@@ -1,0 +1,27 @@
+{
+    "singleQuote": false,
+    "tabWidth": 4,
+    "semi": true,
+    "useTabs": true,
+    "trailingComma": "es5",
+    "printWidth": 120,
+    "endOfLine": "auto",
+    "arrowParens": "avoid",
+    "plugins": [
+        "prettier-plugin-pkg"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderParserPlugins": [
+        "classProperties",
+        "decorators-legacy",
+        "typescript"
+    ],
+    "importOrder": [
+        "<THIRD_PARTY_MODULES>",
+        "^(shared|uiKit|components|localization)/(.+)$",
+        "^@/(.+)$",
+        "^app/(.+)$",
+        "^./(.+)$"
+    ]
+}
