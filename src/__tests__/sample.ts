@@ -10,7 +10,7 @@ describe("Sample test", () => {
 
 	beforeAll(async () => {
 		mongoServer = await MongoMemoryServer.create();
-		mongoose = await runMongo(await mongoServer.getUri());
+		mongoose = await runMongo(mongoServer.getUri());
 		await runApp();
 	});
 
